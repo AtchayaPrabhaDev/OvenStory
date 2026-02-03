@@ -1,0 +1,47 @@
+[{
+    "_id":"pizza",
+    "name":"Pizza",
+    "video":"/videos/pizza.mp4"
+},
+{
+    "_id":"burger",
+    "name":"Burger",
+    "video":"/videos/burger.mp4"
+},
+{
+    "_id":"pasta",
+    "name":"Pasta",
+    "video":"/videos/pasta.mp4"
+},
+{
+    "_id":"burrito",
+    "name":"Burrito",
+    "video":"/videos/burrito.mp4"
+},
+{
+    "_id":"momos",
+    "name":"Momos",
+    "video":"/videos/momos.mp4"
+},
+{
+    "_id":"sandwich",
+    "name":"Sandwich",
+    "video":"/videos/sandwich.mp4"
+},
+{
+    "_id":"cake",
+    "name":"Cake",
+    "video":"/videos/cake.mp4"
+},
+{
+    "_id":"mojito",
+    "name":"Mojito",
+    "video":"/videos/mojito.mp4"
+},
+{
+    "_id":"coffee",
+    "name":"Coffee",
+    "video":"/videos/coffee.mp4"
+}
+]
+

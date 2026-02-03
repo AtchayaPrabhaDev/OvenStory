@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "name": "Veg Pizza",
+    "price": 150,
+    "description": "Delicious vegetarian pizza with fresh toppings.",
+    "image": "/images/veg-pizza.png"
+  },
+  {
+    "id": 2,
+    "name": "Non_veg Pizza",
+    "price": 200,
+    "description": "Delicious non-vegetarian pizza with pepperoni and cheese.",
+    "image": "/images/non-veg pizza.png"
+  },
+  {
+    "id": 3,
+    "name": "Non-Veg Burger",
+    "price": 120,
+    "description": "Juicy chicken burger with lettuce, tomato, and cheese.",
+    "image": "/images/non-veg burger.png"
+  },
+  {
+    "id": 4,
+    "name": "Veg Burger",
+    "price": 100,
+    "description": "Crispy veggie burger with fresh vegetables and sauce.",
+    "image": "/images/veg burger.png"
+  },
+  {
+    "id": 5,
+    "name": " Veg Pasta",
+    "price": 100,
+    "description": "Creamy Alfredo pasta with mushrooms and herbs.",
+    "image": "/images/veg-pasta.png"
+  },
+  {
+    "id": 6,
+    "name": "Non_veg Pasta",
+    "price": 120,
+    "description": "Spaghetti Bolognese with rich meat sauce.",
+    "image": "/images/non-veg pasta.png"
+  },
+  {
+    "id": 7,
+    "name": "Veg Burrito",
+    "price": 200,
+    "description": "Vegetarian burrito with beans, rice, and salsa.",
+    "image": "/images/veg -burrito.png"
+  },
+  {
+    "id": 8,
+    "name": " Non-Veg Burrito",
+    "price": 250,
+    "description": "Chicken burrito with cheese, lettuce, and sour cream.",
+    "image": "/images/non-veg burrito.png"
+  },
+  {
+    "id": 9,
+    "name": " Veg Momos",
+    "price": 100,
+    "description": "Steamed vegetable momos with spicy dipping sauce.",
+    "image": "/images/veg-momos.png"
+  },
+  {
+    "id": 10,
+    "name": "Non-Veg Momos",
+    "price": 120,
+    "description": "Steamed chicken momos with tangy sauce.",
+    "image": "/images/non-veg momos.png"
+  },
+  {
+    "id": 11,
+    "name": "Veg-Sandwich",
+    "price": 100,
+    "description": "Fresh vegetable sandwich with Paneer, charred zucchini, and herb pesto on golden-grilled bread.",
+    "image": "/images/veg-sandwitch.png"
+  },
+  {
+    "id": 12,
+    "name": "Non-Veg Sandwich",
+    "price": 120,
+    "description": "Grilled chicken sandwich with crispy bacon, and melted cheese on toasted sourdough.",
+    "image": "/images/non-veg sandwitch.png"
+
+  },
+    {
+    "id": 13,
+    "name": "Cake",
+    "price": 250,
+    "description": "Delicious chocolate cake with creamy frosting.",
+    "image": "/images/Cake.png"
+  },
+   {
+    "id": 14,
+    "name": "Mojito",
+    "price": 100,
+    "description": "Refreshing mint mojito with lime and soda.",
+    "image": "/images/mojito.png"
+  },
+  {
+    "id": 15,
+    "name": "Coffee",
+    "price": 80,
+    "description": "A creamy latte with leaf art, served on a rustic wooden saucer.",
+    "image": "/images/coffee.png"
+  }
+
+]

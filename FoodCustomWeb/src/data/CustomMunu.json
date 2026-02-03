@@ -1,0 +1,388 @@
+[
+  {
+    "_id": "pizza",
+    "name": "Pizza",
+    "base": {
+      "title": "Choose Crust",
+      "options": [
+        { "name": "Thin Crust", "price": 0, "image": "/images/pizza/thin-crust.png" },
+        { "name": "Cheese Burst", "price": 60, "image": "/images/pizza/cheese-burst.png" },
+        { "name": "Pan Pizza", "price": 40, "image": "/images/pizza/pan-pizza.png" },
+        { "name": "Wheat Crust", "price": 30, "image": "/images/pizza/wheat-crust.png" },
+        { "name": "Stuffed Crust", "price": 70, "image": "/images/pizza/stuffed-crust.png" },
+        { "name": "Garlic Crust", "price": 35, "image": "/images/pizza/garlic-crust.png" },
+        { "name": "Butter Crust", "price": 35, "image": "/images/pizza/butter-crust.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Toppings",
+      "options": [
+        { "name": "Mozzarella", "price": 30, "image": "/images/pizza/mozzarella.png" },
+        { "name": "Olives", "price": 20, "image": "/images/pizza/olives.png" },
+        { "name": "Capsicum", "price": 15, "image": "/images/pizza/capsicum.png" },
+        { "name": "Onion", "price": 15, "image": "/images/pizza/onion.png" },
+        { "name": "Corn", "price": 15, "image": "/images/pizza/corn.png" },
+        { "name": "Jalapeno", "price": 20, "image": "/images/pizza/jalapeno.png" },
+        { "name": "Mushroom", "price": 25, "image": "/images/pizza/mushroom.png" },
+        { "name": "Paneer", "price": 35, "image": "/images/pizza/paneer.png" },
+        { "name": "Chicken", "price": 45, "image": "/images/pizza/chicken.png" },
+        { "name": "Pepperoni", "price": 50, "image": "/images/pizza/pepperoni.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Sauce",
+      "options": [
+        { "name": "Marinara", "price": 10, "image": "/images/pizza/marinara.png" },
+        { "name": "BBQ", "price": 15, "image": "/images/pizza/bbq.png" },
+        { "name": "Pesto", "price": 20, "image": "/images/pizza/pesto.png" },
+        { "name": "Alfredo", "price": 20, "image": "/images/pizza/alfredo.png" },
+        { "name": "Garlic Butter", "price": 15, "image": "/images/pizza/garlic-butter.png" },
+        { "name": "Cheese Drizzle", "price": 25, "image": "/images/pizza/cheese-drizzle.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "burger",
+    "name": "Burger",
+    "base": {
+      "title": "Choose Bun",
+      "options": [
+        { "name": "Classic Bun", "price": 0, "image": "/images/burger/classic-bun.png" },
+        { "name": "Sesame Bun", "price": 20, "image": "/images/burger/sesame-bun.png" },
+        { "name": "Whole Wheat Bun", "price": 25, "image": "/images/burger/whole-wheat-bun.png" },
+        { "name": "Brioche Bun", "price": 35, "image": "/images/burger/brioche-bun.png" },
+        { "name": "Potato Bun", "price": 30, "image": "/images/burger/potato-bun.png" },
+        { "name": "Cheese Bun", "price": 40, "image": "/images/burger/cheese-bun.png" },
+        { "name": "Garlic Bun", "price": 25, "image": "/images/burger/garlic-bun.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Fillings",
+      "options": [
+        { "name": "Cheese Slice", "price": 20, "image": "/images/burger/cheese-slice.png" },
+        { "name": "Lettuce", "price": 10, "image": "/images/burger/lettuce.png" },
+        { "name": "Tomato", "price": 10, "image": "/images/burger/tomato.png" },
+        { "name": "Onion Rings", "price": 15, "image": "/images/burger/onion-rings.png" },
+        { "name": "Pickles", "price": 10, "image": "/images/burger/pickles.png" },
+        { "name": "Paneer Patty", "price": 40, "image": "/images/burger/paneer-patty.png" },
+        { "name": "Chicken Patty", "price": 50, "image": "/images/burger/chicken-patty.png" },
+        { "name": "Bacon", "price": 55, "image": "/images/burger/bacon.png" },
+        { "name": "Mushroom", "price": 25, "image": "/images/burger/mushroom.png" },
+        { "name": "Fried Egg", "price": 30, "image": "/images/burger/fried-egg.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Sauce",
+      "options": [
+        { "name": "Mayo", "price": 10, "image": "/images/burger/mayo.png" },
+        { "name": "Chipotle", "price": 15, "image": "/images/burger/chipotle.png" },
+        { "name": "Mustard", "price": 10, "image": "/images/burger/mustard.png" },
+        { "name": "BBQ", "price": 15, "image": "/images/burger/bbq.png" },
+        { "name": "Ranch", "price": 15, "image": "/images/burger/ranch.png" },
+        { "name": "Garlic Sauce", "price": 15, "image": "/images/burger/garlic-sauce.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "pasta",
+    "name": "Pasta",
+    "base": {
+      "title": "Choose Pasta Type",
+      "options": [
+        { "name": "Penne", "price": 0, "image": "/images/pasta/penne.png" },
+        { "name": "Fusilli", "price": 10, "image": "/images/pasta/fusilli.png" },
+        { "name": "Spaghetti", "price": 10, "image": "/images/pasta/spaghetti.png" },
+        { "name": "Farfalle", "price": 15, "image": "/images/pasta/farfalle.png" },
+        { "name": "Macaroni", "price": 10, "image": "/images/pasta/macaroni.png" },
+        { "name": "Whole Wheat Pasta", "price": 20, "image": "/images/pasta/whole-wheat-pasta.png" },
+        { "name": "Gluten Free Pasta", "price": 25, "image": "/images/pasta/gluten-free-pasta.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Toppings",
+      "options": [
+        { "name": "Cheese", "price": 20, "image": "/images/pasta/cheese.png" },
+        { "name": "Olives", "price": 15, "image": "/images/pasta/olives.png" },
+        { "name": "Capsicum", "price": 10, "image": "/images/pasta/capsicum.png" },
+        { "name": "Onion", "price": 10, "image": "/images/pasta/onion.png" },
+        { "name": "Corn", "price": 10, "image": "/images/pasta/corn.png" },
+        { "name": "Mushroom", "price": 20, "image": "/images/pasta/mushroom.png" },
+        { "name": "Paneer", "price": 30, "image": "/images/pasta/paneer.png" },
+        { "name": "Chicken", "price": 40, "image": "/images/pasta/chicken.png" },
+        { "name": "Broccoli", "price": 20, "image": "/images/pasta/broccoli.png" },
+        { "name": "Spinach", "price": 15, "image": "/images/pasta/spinach.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Sauce",
+      "options": [
+        { "name": "White Sauce", "price": 20, "image": "/images/pasta/white-sauce.png" },
+        { "name": "Red Sauce", "price": 15, "image": "/images/pasta/red-sauce.png" },
+        { "name": "Pesto", "price": 20, "image": "/images/pasta/pesto.png" },
+        { "name": "Cheese Sauce", "price": 25, "image": "/images/pasta/cheese-sauce.png" },
+        { "name": "Butter Garlic", "price": 15, "image": "/images/pasta/butter-garlic.png" },
+        { "name": "Spicy Sauce", "price": 15, "image": "/images/pasta/spicy-sauce.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "burrito",
+    "name": "Burrito Bowl",
+    "base": {
+      "title": "Choose Bowl Base",
+      "options": [
+        { "name": "White Rice", "price": 0, "image": "/images/burrito/white-rice.png" },
+        { "name": "Brown Rice", "price": 10, "image": "/images/burrito/brown-rice.png" },
+        { "name": "Mexican Rice", "price": 15, "image": "/images/burrito/mexican-rice.png" },
+        { "name": "Quinoa", "price": 25, "image": "/images/burrito/quinoa.png" },
+        { "name": "Salad Base", "price": 20, "image": "/images/burrito/salad-base.png" },
+        { "name": "Beans Base", "price": 15, "image": "/images/burrito/beans-base.png" },
+        { "name": "Mixed Rice", "price": 20, "image": "/images/burrito/mixed-rice.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Toppings",
+      "options": [
+        { "name": "Grilled Chicken", "price": 40, "image": "/images/burrito/grilled-chicken.png" },
+        { "name": "Paneer", "price": 35, "image": "/images/burrito/paneer.png" },
+        { "name": "Black Beans", "price": 20, "image": "/images/burrito/black-beans.png" },
+        { "name": "Corn", "price": 15, "image": "/images/burrito/corn.png" },
+        { "name": "Capsicum", "price": 15, "image": "/images/burrito/capsicum.png" },
+        { "name": "Onion", "price": 10, "image": "/images/burrito/onion.png" },
+        { "name": "Cheese", "price": 20, "image": "/images/burrito/cheese.png" },
+        { "name": "Avocado", "price": 30, "image": "/images/burrito/avocado.png" },
+        { "name": "Salsa Mix", "price": 20, "image": "/images/burrito/salsa-mix.png" },
+        { "name": "Lettuce", "price": 15, "image": "/images/burrito/lettuce.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Sauce",
+      "options": [
+        { "name": "Salsa Roja", "price": 10, "image": "/images/burrito/salsa-roja.png" },
+        { "name": "Chipotle", "price": 15, "image": "/images/burrito/chipotle.png" },
+        { "name": "Garlic Mayo", "price": 15, "image": "/images/burrito/garlic-mayo.png" },
+        { "name": "Queso", "price": 20, "image": "/images/burrito/queso.png" },
+        { "name": "Ranch", "price": 15, "image": "/images/burrito/ranch.png" },
+        { "name": "Spicy Sauce", "price": 15, "image": "/images/burrito/spicy-sauce.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "momos",
+    "name": "Momos",
+    "base": {
+      "title": "Choose Dough",
+      "options": [
+        { "name": "Classic Dough", "price": 0, "image": "/images/momos/classic-dough.png" },
+        { "name": "Wheat Dough", "price": 10, "image": "/images/momos/wheat-dough.png" },
+        { "name": "Spinach Dough", "price": 15, "image": "/images/momos/spinach-dough.png" },
+        { "name": "Beetroot Dough", "price": 15, "image": "/images/momos/beetroot-dough.png" },
+        { "name": "Multigrain Dough", "price": 20, "image": "/images/momos/multigrain-dough.png" },
+        { "name": "Garlic Dough", "price": 15, "image": "/images/momos/garlic-dough.png" },
+        { "name": "Butter Dough", "price": 10, "image": "/images/momos/butter-dough.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Choose Filling",
+      "options": [
+        { "name": "Veg Mix", "price": 20, "image": "/images/momos/veg-mix.png" },
+        { "name": "Paneer", "price": 30, "image": "/images/momos/paneer.png" },
+        { "name": "Chicken", "price": 40, "image": "/images/momos/chicken.png" },
+        { "name": "Cheese", "price": 25, "image": "/images/momos/cheese.png" },
+        { "name": "Corn", "price": 15, "image": "/images/momos/corn.png" },
+        { "name": "Mushroom", "price": 20, "image": "/images/momos/mushroom.png" },
+        { "name": "Spinach", "price": 15, "image": "/images/momos/spinach.png" },
+        { "name": "Tofu", "price": 25, "image": "/images/momos/tofu.png" },
+        { "name": "Mixed Veg", "price": 20, "image": "/images/momos/mixed-veg.png" },
+        { "name": "Soya Chunks", "price": 25, "image": "/images/momos/soya-chunks.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Dip",
+      "options": [
+        { "name": "Red Chilli Sauce", "price": 10, "image": "/images/momos/red-chilli-sauce.png" },
+        { "name": "Green Chilli Sauce", "price": 10, "image": "/images/momos/green-chilli-sauce.png" },
+        { "name": "Garlic Sauce", "price": 15, "image": "/images/momos/garlic-sauce.png" },
+        { "name": "Soy Sauce", "price": 10, "image": "/images/momos/soy-sauce.png" },
+        { "name": "Spicy Mayo", "price": 15, "image": "/images/momos/spicy-mayo.png" },
+        { "name": "Chilli Oil", "price": 15, "image": "/images/momos/chilli-oil.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "sandwich",
+    "name": "Sandwich",
+    "base": {
+      "title": "Choose Bread",
+      "options": [
+        { "name": "White Bread", "price": 0, "image": "/images/sandwich/white-bread.png" },
+        { "name": "Brown Bread", "price": 15, "image": "/images/sandwich/brown-bread.png" },
+        { "name": "Multigrain Bread", "price": 25, "image": "/images/sandwich/multigrain-bread.png" },
+        { "name": "Garlic Bread", "price": 20, "image": "/images/sandwich/garlic-bread.png" },
+        { "name": "Butter Bread", "price": 15, "image": "/images/sandwich/butter-bread.png" },
+        { "name": "Cheese Bread", "price": 25, "image": "/images/sandwich/cheese-bread.png" },
+        { "name": "Herb Bread", "price": 20, "image": "/images/sandwich/herb-bread.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Fillings",
+      "options": [
+        { "name": "Cheese", "price": 15, "image": "/images/sandwich/cheese.png" },
+        { "name": "Corn", "price": 15, "image": "/images/sandwich/corn.png" },
+        { "name": "Tomato", "price": 10, "image": "/images/sandwich/tomato.png" },
+        { "name": "Cucumber", "price": 10, "image": "/images/sandwich/cucumber.png" },
+        { "name": "Paneer", "price": 35, "image": "/images/sandwich/paneer.png" },
+        { "name": "Chicken", "price": 45, "image": "/images/sandwich/chicken.png" },
+        { "name": "Lettuce", "price": 15, "image": "/images/sandwich/lettuce.png" },
+        { "name": "Onion", "price": 10, "image": "/images/sandwich/onion.png" },
+        { "name": "Olives", "price": 15, "image": "/images/sandwich/olives.png" },
+        { "name": "Mushroom", "price": 20, "image": "/images/sandwich/mushroom.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Spread",
+      "options": [
+        { "name": "Mint Mayo", "price": 10, "image": "/images/sandwich/mint-mayo.png" },
+        { "name": "Chipotle", "price": 15, "image": "/images/sandwich/chipotle.png" },
+        { "name": "Garlic Sauce", "price": 15, "image": "/images/sandwich/garlic-sauce.png" },
+        { "name": "Honey Mustard", "price": 15, "image": "/images/sandwich/honey-mustard.png" },
+        { "name": "Classic Mayo", "price": 10, "image": "/images/sandwich/classic-mayo.png" },
+        { "name": "Spicy Spread", "price": 15, "image": "/images/sandwich/spicy-spread.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "cake",
+    "name": "Cake",
+    "base": {
+      "title": "Choose Cake Base",
+      "options": [
+        { "name": "Vanilla Base", "price": 0, "image": "/images/cake/vanilla-base.png" },
+        { "name": "Chocolate Base", "price": 30, "image": "/images/cake/chocolate-base.png" },
+        { "name": "Red Velvet Base", "price": 40, "image": "/images/cake/red-velvet-base.png" },
+        { "name": "Butterscotch Base", "price": 30, "image": "/images/cake/butterscotch-base.png" },
+        { "name": "Strawberry Base", "price": 25, "image": "/images/cake/strawberry-base.png" },
+        { "name": "Coffee Base", "price": 35, "image": "/images/cake/coffee-base.png" },
+        { "name": "Black Forest Base", "price": 40, "image": "/images/cake/black-forest-base.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Toppings",
+      "options": [
+        { "name": "Chocolate Chips", "price": 15, "image": "/images/cake/chocolate-chips.png" },
+        { "name": "Sprinkles", "price": 10, "image": "/images/cake/sprinkles.png" },
+        { "name": "Choco Balls", "price": 20, "image": "/images/cake/choco-balls.png" },
+        { "name": "Strawberry", "price": 15, "image": "/images/cake/strawberry.png" },
+        { "name": "Blueberry", "price": 20, "image": "/images/cake/blueberry.png" },
+        { "name": "Cherry", "price": 15, "image": "/images/cake/cherry.png" },
+        { "name": "Almond Flakes", "price": 20, "image": "/images/cake/almond-flakes.png" },
+        { "name": "Cashew Bits", "price": 20, "image": "/images/cake/cashew-bits.png" },
+        { "name": "Oreo Crumbs", "price": 25, "image": "/images/cake/oreo-crumbs.png" },
+        { "name": "Kitkat Bits", "price": 25, "image": "/images/cake/kitkat-bits.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Syrup",
+      "options": [
+        { "name": "Chocolate Syrup", "price": 15, "image": "/images/cake/chocolate-syrup.png" },
+        { "name": "Strawberry Syrup", "price": 15, "image": "/images/cake/strawberry-syrup.png" },
+        { "name": "Caramel Syrup", "price": 15, "image": "/images/cake/caramel-syrup.png" },
+        { "name": "Honey Syrup", "price": 10, "image": "/images/cake/honey-syrup.png" },
+        { "name": "Vanilla Syrup", "price": 10, "image": "/images/cake/vanilla-syrup.png" },
+        { "name": "Butterscotch Syrup", "price": 15, "image": "/images/cake/butterscotch-syrup.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "mojito",
+    "name": "Mojito",
+    "base": {
+      "title": "Choose Base",
+      "options": [
+        { "name": "Lime Soda", "price": 0, "image": "/images/mojito/lime-soda.png" },
+        { "name": "Sprite Base", "price": 10, "image": "/images/mojito/sprite-base.png" },
+        { "name": "Club Soda", "price": 10, "image": "/images/mojito/club-soda.png" },
+        { "name": "Sparkling Water", "price": 15, "image": "/images/mojito/sparkling-water.png" },
+        { "name": "Mint Soda", "price": 15, "image": "/images/mojito/mint-soda.png" },
+        { "name": "Lemon Soda", "price": 10, "image": "/images/mojito/lemon-soda.png" },
+        { "name": "Ginger Soda", "price": 15, "image": "/images/mojito/ginger-soda.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Mix",
+      "options": [
+        { "name": "Mint Leaves", "price": 5, "image": "/images/mojito/mint-leaves.png" },
+        { "name": "Lemon Slice", "price": 5, "image": "/images/mojito/lemon-slice.png" },
+        { "name": "Orange Slice", "price": 5, "image": "/images/mojito/orange-slice.png" },
+        { "name": "Strawberry", "price": 10, "image": "/images/mojito/strawberry.png" },
+        { "name": "Blueberry", "price": 10, "image": "/images/mojito/blueberry.png" },
+        { "name": "Pineapple", "price": 10, "image": "/images/mojito/pineapple.png" },
+        { "name": "Apple Bits", "price": 10, "image": "/images/mojito/apple-bits.png" },
+        { "name": "Ice Cubes", "price": 5, "image": "/images/mojito/ice-cubes.png" },
+        { "name": "Crushed Ice", "price": 5, "image": "/images/mojito/crushed-ice.png" },
+        { "name": "Sugar Crystals", "price": 5, "image": "/images/mojito/sugar-crystals.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Syrup",
+      "options": [
+        { "name": "Mint Syrup", "price": 10, "image": "/images/mojito/mint-syrup.png" },
+        { "name": "Strawberry Syrup", "price": 10, "image": "/images/mojito/strawberry-syrup.png" },
+        { "name": "Blueberry Syrup", "price": 10, "image": "/images/mojito/blueberry-syrup.png" },
+        { "name": "Green Apple Syrup", "price": 10, "image": "/images/mojito/green-apple-syrup.png" },
+        { "name": "Lemon Syrup", "price": 10, "image": "/images/mojito/lemon-syrup.png" },
+        { "name": "Orange Syrup", "price": 10, "image": "/images/mojito/orange-syrup.png" }
+      ]
+    }
+  },
+
+  {
+    "_id": "coffee",
+    "name": "Coffee",
+    "base": {
+      "title": "Choose Coffee Base",
+      "options": [
+        { "name": "Espresso", "price": 0, "image": "/images/coffee/espresso.png" },
+        { "name": "Americano", "price": 10, "image": "/images/coffee/americano.png" },
+        { "name": "Latte", "price": 15, "image": "/images/coffee/latte.png" },
+        { "name": "Cappuccino", "price": 15, "image": "/images/coffee/cappuccino.png" },
+        { "name": "Mocha", "price": 20, "image": "/images/coffee/mocha.png" },
+        { "name": "Cold Brew", "price": 20, "image": "/images/coffee/cold-brew.png" },
+        { "name": "Iced Coffee", "price": 15, "image": "/images/coffee/iced-coffee.png" }
+      ]
+    },
+    "toppings": {
+      "title": "Add Toppings",
+      "options": [
+        { "name": "Whipped Cream", "price": 10, "image": "/images/coffee/whipped-cream.png" },
+        { "name": "Chocolate Chips", "price": 10, "image": "/images/coffee/chocolate-chips.png" },
+        { "name": "Caramel Bits", "price": 10, "image": "/images/coffee/caramel-bits.png" },
+        { "name": "Cinnamon Powder", "price": 5, "image": "/images/coffee/cinnamon-powder.png" },
+        { "name": "Ice Cubes", "price": 5, "image": "/images/coffee/ice-cubes.png" },
+        { "name": "Coffee Beans", "price": 5, "image": "/images/coffee/coffee-beans.png" },
+        { "name": "Vanilla Cream", "price": 10, "image": "/images/coffee/vanilla-cream.png" },
+        { "name": "Hazelnut Bits", "price": 10, "image": "/images/coffee/hazelnut-bits.png" },
+        { "name": "Milk Foam", "price": 5, "image": "/images/coffee/milk-foam.png" },
+        { "name": "Cocoa Powder", "price": 5, "image": "/images/coffee/cocoa-powder.png" }
+      ]
+    },
+    "sauces": {
+      "title": "Choose Syrup",
+      "options": [
+        { "name": "Caramel Syrup", "price": 10, "image": "/images/coffee/caramel-syrup.png" },
+        { "name": "Vanilla Syrup", "price": 10, "image": "/images/coffee/vanilla-syrup.png" },
+        { "name": "Chocolate Syrup", "price": 10, "image": "/images/coffee/chocolate-syrup.png" },
+        { "name": "Hazelnut Syrup", "price": 10, "image": "/images/coffee/hazelnut-syrup.png" },
+        { "name": "Irish Syrup", "price": 10, "image": "/images/coffee/irish-syrup.png" },
+        { "name": "Butterscotch Syrup", "price": 10, "image": "/images/coffee/butterscotch-syrup.png" }
+      ]
+    }
+  }
+]

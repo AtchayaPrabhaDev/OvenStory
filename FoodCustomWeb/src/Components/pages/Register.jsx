@@ -1,32 +1,33 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../services/api";
 
 export default function Register() {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [location, setLocation] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    if (!username || !password || !location) {
+    if (!username || !password || !address) {
       alert("Fill all fields");
       return;
     }
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
-        { username, password, location }
-      );
+      const res = await registerUser({
+        username,
+        password,
+        address,
+      });
 
       alert(res.data.message);
       navigate("/");
     } catch (err) {
-      alert(err.response?.data?.message || "Something went wrong");
+      alert(err.response?.data?.message || "Register failed");
     }
   };
 
@@ -49,9 +50,9 @@ export default function Register() {
         />
 
         <textarea
-          placeholder="Location"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
+          placeholder="Address"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
 
         <button type="submit">Register</button>

@@ -4,7 +4,6 @@ import { loginUser } from "../../services/api";
 
 export default function Login() {
   const navigate = useNavigate();
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -46,11 +45,7 @@ export default function Login() {
 
         <button type="submit">Login</button>
 
-        <button
-          type="button"
-          className="secondary-btn"
-          onClick={() => navigate("/register")}
-        >
+        <button type="button" onClick={() => navigate("/register")}>
           Create New Account
         </button>
       </form>

@@ -27,7 +27,7 @@ export default function Register() {
       alert(res.data.message);
       navigate("/");
     } catch (err) {
-      alert(err.response?.data?.message || "Register failed");
+      alert(err.response?.data?.message || "Registration failed");
     }
   };
 
@@ -50,7 +50,7 @@ export default function Register() {
         />
 
         <textarea
-          placeholder="Address"
+          placeholder="Delivery Address"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
@@ -60,3 +60,4 @@ export default function Register() {
     </div>
   );
 }
+

@@ -625,8 +625,8 @@ video
 .auth {
   min-height: 100vh;
   background: linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
     ),
     url("/images/food-bg.jpg"); /* home page food vibe */
   background-size: cover;

@@ -7,13 +7,12 @@ export default function Register() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [address, setAddress] = useState("");
+  const [location, setLocation] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    // frontend validation
-    if (!username || !password || !address) {
+    if (!username || !password || !location) {
       alert("Fill all fields");
       return;
     }
@@ -21,17 +20,10 @@ export default function Register() {
     try {
       const res = await axios.post(
         "http://localhost:5000/api/auth/register",
-        {
-          username,
-          password,
-          address,
-        }
+        { username, password, location }
       );
 
-      // ✅ use res → no warning
       alert(res.data.message);
-
-      // ✅ redirect to login
       navigate("/");
     } catch (err) {
       alert(err.response?.data?.message || "Something went wrong");
@@ -44,11 +36,9 @@ export default function Register() {
         <h2>Register</h2>
 
         <input
-          type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          required
         />
 
         <input
@@ -56,14 +46,12 @@ export default function Register() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
 
         <textarea
-          placeholder="Delivery Address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          required
+          placeholder="Location"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         />
 
         <button type="submit">Register</button>
@@ -71,4 +59,3 @@ export default function Register() {
     </div>
   );
 }
-

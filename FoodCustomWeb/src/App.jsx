@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useState } from "react";
-
+ 
 // USER PAGES
 import Home from "./Components/pages/Home";
 import Customize from "./Components/pages/Customize";

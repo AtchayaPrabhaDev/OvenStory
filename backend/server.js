@@ -8,23 +8,25 @@ import menuBuilderRoutes from "./routes/menuBuilders.js";
 import videoRoutes from "./routes/videos.js";
 import authRoutes from "./routes/auth.js";
 
-dotenv.config(); // MUST
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// 🔥 CORS FIX FOR VERCEL + RENDER
+/* 🔥 FINAL CORS CONFIG (WORKS FOR LOCAL + VERCEL + RENDER) */
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://ovenstory.vercel.app",
-      "https://oven-story.vercel.app",
+      /https:\/\/.*vercel\.app$/,
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
+
+// handle preflight requests
+app.options("*", cors());
 
 app.use(express.json());
 
@@ -45,4 +47,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
 

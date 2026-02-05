@@ -1,5 +1,5 @@
 import Menu from "../../data/Menu.json";
-import Banner from "../banner";
+import Banner from "../Banner";
 
 export default function Home({ addToCart }) {
   return (

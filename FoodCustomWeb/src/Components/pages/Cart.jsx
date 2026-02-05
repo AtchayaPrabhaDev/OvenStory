@@ -1,14 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; 
-import Order from "./Order"
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
-export default function Cart({ cartItems, removeFromCart, clearCart }) {
-  const navigate = useNavigate(); // <-- hook for navigation
+export default function Cart() {
+  const navigate = useNavigate();
+  const { cartItems, removeFromCart, clearCart } = useCart();
+
   const totalAmount = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   const handleCheckout = () => {
-    alert("Order placed successfully");
-    navigate("/order"); // <-- navigate to the Order page
+    alert("Order placed successfully!");
+    clearCart();
+    navigate("/order");
   };
 
   return (
@@ -22,16 +25,10 @@ export default function Cart({ cartItems, removeFromCart, clearCart }) {
           <ul className="cart-list">
             {cartItems.map((item, index) => (
               <li key={index} className="cart-item">
-                <span className="cart-image">
-                  <img src={item.image} alt={item.name} className="food-img" />
-                </span>
+                <img src={item.image} alt={item.name} className="food-img" />
                 <span className="cart-name">{item.name}</span>
                 <span className="cart-price">₹{item.price}</span>
-
-                <button
-                  onClick={() => removeFromCart(index)}
-                  className="remove-btn"
-                >
+                <button onClick={() => removeFromCart(index)} className="remove-btn">
                   Remove
                 </button>
               </li>
@@ -43,7 +40,6 @@ export default function Cart({ cartItems, removeFromCart, clearCart }) {
           <button onClick={clearCart} className="clear-btn">
             Clear Cart
           </button>
-
           <button onClick={handleCheckout} className="check-out">
             Checkout
           </button>
@@ -52,3 +48,4 @@ export default function Cart({ cartItems, removeFromCart, clearCart }) {
     </div>
   );
 }
+

@@ -1,41 +1,30 @@
 import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getBuilderItem,getVideos } from "../../services/api";
+import { getBuilderItem, getVideos } from "../../services/api";
+import { useCart } from "../context/CartContext";
 
-export default function Builder({ addToCart }) {
+export default function Builder() {
   const { id } = useParams();
   const location = useLocation();
+  const { addToCart } = useCart();
 
   const [item, setItem] = useState(null);
   const [videos, setVideos] = useState(null);
   const [step, setStep] = useState("base");
-  
 
   const [selectedBase, setSelectedBase] = useState(null);
   const [selectedToppings, setSelectedToppings] = useState([]);
   const [selectedSauce, setSelectedSauce] = useState(null);
 
-  // GET IMAGE FROM CUSTOMIZE PAGE
   const finalImage = location.state?.image;
 
-
-  /* FETCH BUILDER DATA */
   useEffect(() => {
     getBuilderItem(id).then(setItem);
+    getVideos(id).then(setVideos).catch(console.error);
   }, [id]);
-
-
-    // Fetch video by item id
-  useEffect(() => {
-    getVideos(id)
-      .then(setVideos)
-      .catch(err => console.error("Error fetching video:", err));
-  }, [id]);
-
 
   if (!item) return <p className="loading">Loading...</p>;
 
-  /* TOGGLE TOPPINGS */
   const toggleTopping = (topping) => {
     setSelectedToppings((prev) =>
       prev.some((t) => t.name === topping.name)
@@ -44,7 +33,6 @@ export default function Builder({ addToCart }) {
     );
   };
 
-  /* TOTAL */
   const total =
     (selectedBase?.price || 0) +
     selectedToppings.reduce((sum, t) => sum + t.price, 0) +
@@ -58,129 +46,75 @@ export default function Builder({ addToCart }) {
 
   return (
     <div className="builder-layout">
-
-      {/* LEFT SIDE OPTIONS */}
       <div className="builder-container">
         <h1 className="builder-title">{item.name} Builder</h1>
 
-        {/* STEPPER */}
         <div className="builder-steps">
           {stepLabels.map((s, i) => (
             <div key={s.key} className="step-wrapper">
-              <Step
-                label={s.title}
-                active={step === s.key}
-                completed={
-                  (s.key === "base" && step !== "base") ||
-                  (s.key === "toppings" && step === "sauces")
-                }
-              />
-              {i < stepLabels.length - 1 && (
-                <Line active={step === "toppings" || step === "sauces"} />
-              )}
+              <Step label={s.title} active={step === s.key} completed={(s.key === "base" && step !== "base") || (s.key === "toppings" && step === "sauces")} />
+              {i < stepLabels.length - 1 && <Line active={step === "toppings" || step === "sauces"} />}
             </div>
           ))}
         </div>
 
         <h2 className="total">Total ₹{total}</h2>
 
-        {/* BASE OPTIONS */}
         {step === "base" && (
           <div className="options">
             <h3>{item.base.title}</h3>
-
-            <div className="options-group">
-              {item.base.options.map((item) => (
-                <label key={item.name} className="option-item">
-                  <input
-                    type="radio"
-                    name="base"
-                    checked={selectedBase?.name === item.name}
-                    onChange={() => setSelectedBase(item)}
-                  />
-                  {item.name} (+₹{item.price})
-                </label>
-              ))}
-            </div>
-
-            <button
-              className="next-btn"
-              disabled={!selectedBase}
-              onClick={() => setStep("toppings")}
-            >
-              Next →
-            </button>
+            {item.base.options.map((b) => (
+              <label key={b.name}>
+                <input type="radio" name="base" checked={selectedBase?.name === b.name} onChange={() => setSelectedBase(b)} />
+                {b.name} (+₹{b.price})
+              </label>
+            ))}
+            <button disabled={!selectedBase} onClick={() => setStep("toppings")}>Next →</button>
           </div>
         )}
 
-        {/* TOPPINGS OPTIONS */}
         {step === "toppings" && (
           <div className="options">
             <h3>{item.toppings.title}</h3>
-
-            <div className="options-group">
-              {item.toppings.options.map((item) => (
-                <label key={item.name} className="option-item">
-                  <input
-                    type="checkbox"
-                    checked={selectedToppings.some((x) => x.name === item.name)}
-                    onChange={() => toggleTopping(item)}
-                  />
-                  {item.name} (+₹{item.price})
-                </label>
-              ))}
-            </div>
-
-            <button className="next-btn" onClick={() => setStep("sauces")}>
-              Next →
-            </button>
+            {item.toppings.options.map((t) => (
+              <label key={t.name}>
+                <input type="checkbox" checked={selectedToppings.some((x) => x.name === t.name)} onChange={() => toggleTopping(t)} />
+                {t.name} (+₹{t.price})
+              </label>
+            ))}
+            <button onClick={() => setStep("sauces")}>Next →</button>
           </div>
         )}
 
-        {/* SAUCE OPTIONS */}
         {step === "sauces" && (
           <div className="options">
             <h3>{item.sauces.title}</h3>
-
-            <div className="options-group">
-              {item.sauces.options.map((item) => (
-                <label key={item.name} className="option-item">
-                  <input
-                    type="radio"
-                    name="sauce"
-                    checked={selectedSauce?.name === item.name}
-                    onChange={() => setSelectedSauce(item)}
-                  />
-                  {item.name} (+₹{item.price})
-                </label>
-              ))}
-            </div>
-
-            <button
-              className="add-to-cart"
-              disabled={!selectedBase}
-              onClick={() => {
-                const customizedItem = {
-                  id: item._id || item.id,
-                  name: item.name,
-                  image: finalImage,
-                  base: selectedBase,
-                  toppings: selectedToppings,
-                  sauce: selectedSauce,
-                  price: total,
-                };
-
-                addToCart(customizedItem);
-              }}
-            >
+            {item.sauces.options.map((s) => (
+              <label key={s.name}>
+                <input type="radio" name="sauce" checked={selectedSauce?.name === s.name} onChange={() => setSelectedSauce(s)} />
+                {s.name} (+₹{s.price})
+              </label>
+            ))}
+            <button disabled={!selectedBase} onClick={() => {
+              const customizedItem = {
+                id: item._id,
+                name: item.name,
+                image: finalImage,
+                base: selectedBase,
+                toppings: selectedToppings,
+                sauce: selectedSauce,
+                price: total,
+              };
+              addToCart(customizedItem);
+              alert("Added to cart!");
+            }}>
               Add to Cart
             </button>
           </div>
         )}
       </div>
 
-      {/* RIGHT SIDE IMAGE */}
-        <div className="builder-preview">
+      <div className="builder-preview">
         {videos ? (
           <video src={videos.video} autoPlay loop muted className="builder-image" />
         ) : (
@@ -191,20 +125,9 @@ export default function Builder({ addToCart }) {
   );
 }
 
-/* STEP COMPONENT */
 function Step({ label, active, completed }) {
-  return (
-    <div className={`step ${active ? "active" : ""} ${completed ? "completed" : ""}`}>
-      {label}
-    </div>
-  );
+  return <div className={`step ${active ? "active" : ""} ${completed ? "completed" : ""}`}>{label}</div>;
 }
-
-/* LINE */
 function Line({ active }) {
   return <div className={`step-line ${active ? "active" : ""}`} />;
 }
-
-
-
-

@@ -19,15 +19,9 @@ export default function Customize() {
             <h3>{item.name}</h3>
             <p>{item.description}</p>
             <p>Starting From ₹{item.price}</p>
-
-            <button onClick={() =>
-               navigate(`/builder/${item._id}`,{
-                state:{
-                  image:item.image
-                }
-                })
-                }
-                >
+            <button
+              onClick={() => navigate(`/builder/${item._id}`, { state: { image: item.image } })}
+            >
               Customize
             </button>
           </div>
@@ -36,4 +30,3 @@ export default function Customize() {
     </div>
   );
 }
-
